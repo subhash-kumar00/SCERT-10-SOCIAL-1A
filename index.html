@@ -56,7 +56,7 @@
       </div>
 
       <div class="bg-slate-900/90 p-5 rounded-2xl border border-slate-700 text-slate-200 text-xs sm:text-sm leading-relaxed space-y-2 shadow-inner">
-        <p class="font-bold text-cyan-400 text-sm">"മാനവികതയുടെ ചരിത്രവും നവോത്ഥാന മുന്നേറ്റങ്ങളും കൃത്യതയോടെ വിശകലനം ചെയ്യുക."</p>
+        <p class="font-bold text-cyan-400 text-sm">"മാനവികതയുടെ ഉദയവും നവോത്ഥാന ചരിത്രവും കൃത്യതയോടെ വിശകലനം ചെയ്യുക."</p>
         <p class="text-slate-300">കുറഞ്ഞത് <strong class="text-emerald-400">7 മാർക്ക്</strong> നേടിയാൽ മാത്രമേ ഔദ്യോഗിക നോട്ട്സ് PDF ഡൗൺലോഡ് ചെയ്യാൻ സാധിക്കൂ! ആത്മവിശ്വാസത്തോടെ പരീക്ഷ ആരംഭിക്കുക.</p>
       </div>
 
@@ -531,7 +531,7 @@
             const matched = history.slice().reverse().find(h => 
               h.title === examTitle || 
               h.title === QUIZ_SHEET_NAME ||
-              (h.title && (h.title.includes("10th") || h.title.includes("സാമൂഹിക")))
+              (h.title && (h.title.includes("സാമൂഹികശാസ്ത്രം") || h.title.includes("Social")))
             );
             if (matched) {
               prevScore = matched.score;
@@ -768,7 +768,7 @@
       const badge = document.getElementById('scoreMotivationBadge');
       if (scoreNum >= 20) {
         badge.className = "max-w-xl mx-auto p-4 rounded-2xl border border-emerald-500/60 bg-emerald-950/40 text-emerald-300";
-        badge.innerHTML = `🌟 <strong>അത്യുജ്ജ്വല പ്രകടനം!</strong> സാമൂഹികശാസ്ത്രം വിഷയത്തിൽ നിങ്ങൾ മികച്ച അറിവ് തെളിയിച്ചിരിക്കുന്നു!`;
+        badge.innerHTML = `🌟 <strong>അത്യുജ്ജ്വല പ്രകടനം!</strong> സാമൂഹികശാസ്ത്ര വിഷയങ്ങളിൽ നിങ്ങൾ മികച്ച അറിവ് തെളിയിച്ചിരിക്കുന്നു!`;
       } else if (scoreNum >= 14) {
         badge.className = "max-w-xl mx-auto p-4 rounded-2xl border border-cyan-500/60 bg-cyan-950/40 text-cyan-300";
         badge.innerHTML = `👍 <strong>മികച്ച പ്രകടനം!</strong> ചെറിയ ചില തെറ്റുകൾ തിരുത്തിയാൽ പൂർണ്ണ മാർക്കിലേക്ക് എത്താം.`;
@@ -1092,7 +1092,7 @@
       const element = document.getElementById('pdfExportWrapper');
       const opt = {
         margin:       [10, 10, 10, 10],
-        filename:     `${currentUser.name}_10th_Social_Science_Chapter1_PartA_Scorecard.pdf`,
+        filename:     `${currentUser.name}_Social_Science_Set1_Scorecard.pdf`,
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#1e293b' },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
@@ -1210,11 +1210,6 @@
 
       window.location.href = `${homePortalUrl}?completed=true&title=${encodeURIComponent(examTitle)}&score=${score}&correct=${correct}&wrong=${wrong}&skipped=${skipped}`;
     }
-        let GOOGLE_SHEET_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwKBTm6Hj11YhzZLCEMBupKa3XAuq7Ns4M5iyU4vzwxaXfppLGWIR9ZWJeWlvGBjRaG/exec";
-    const QUIZ_SHEET_NAME = "10th സാമൂഹികശാസ്ത്രം ചാപ്റ്റർ 1 Part A"; // 🌟 ഷീറ്റ് ടാബിന്റെ പേര് കൃത്യമായി ഇവിടെ മാറ്റിയിട്ടുണ്ട്
-    let ORIGINAL_PDF_URL = "https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/export?format=pdf";
-    let examTitle = "10th സാമൂഹികശാസ്ത്രം ചാപ്റ്റർ 1 Part A";
-
   </script>
 </body>
 </html>
