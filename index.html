@@ -495,12 +495,8 @@
         motElem.innerText = `ഹലോ, ${currentUser.name}! ✨`;
       }
 
-      const currentFullUrl = window.location.href.toLowerCase();
-      const isReviewMode = currentFullUrl.includes("view=solution") || 
-                           currentFullUrl.includes("solution") || 
-                           currentFullUrl.includes("result") || 
-                           currentFullUrl.includes("review") ||
-                           urlParams.get('view') === 'solution';
+      // 🌟 കൃത്യമായ പരിശോധന: Previous Results വഴി ക്ലിക്ക് ചെയ്താൽ മാത്രമേ ഇത് true ആകൂ
+      const isReviewMode = urlParams.get('view') === 'solution';
 
       if (isReviewMode) {
         if (motivationScreen) {
